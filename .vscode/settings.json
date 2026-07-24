@@ -1,0 +1,41 @@
+{
+  // emmet
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.useInlineCompletions": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  // improved suggestion
+  "editor.quickSuggestions": {
+    "strings": true,
+    "comments": true,
+    "other": "on"
+  },
+  "editor.snippetSuggestions": "top",
+  // code formatting
+  "editor.tabSize": 2,
+  "files.eol": "\n",
+  "editor.insertSpaces": true,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "prettier.documentSelectors": ["**/*.astro"],
+  "[astro]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "json.format.enable": true,
+  "js/ts.format.enabled": true,
+  // spell check
+  "cSpell.enabledFileTypes": {
+    "astro": true
+  },
+  "cSpell.ignoreRandomStrings": true,
+  "tailwindCSS.emmetCompletions": true,
+  "npm.packageManager": "bun",
+  "files.associations": {
+    "bun.lock": "jsonc"
+  }
+}

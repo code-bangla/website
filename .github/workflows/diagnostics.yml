@@ -1,0 +1,28 @@
+name: "Astro Diagnostics"
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+  workflow_dispatch:
+jobs:
+  diagnostics:
+    name: Run Astro Diagnostics
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.pull_request.head.ref || github.ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name || github.repository }}
+
+      - name: Install bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Run Astro Diagnostics
+        run: bun -b run astro check
